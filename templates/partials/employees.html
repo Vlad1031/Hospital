@@ -1,0 +1,73 @@
+{% block content %}
+    <link rel="stylesheet" href="static/css/employees.css">
+
+    <section class="team" id="team">
+        <div class="container">
+            <div class="team-inner">
+                <h1 class="title team-title title-line">
+                    <span>Працівники</span>
+                </h1>
+
+                <ul class="team-list">
+                    {% for employee in employees %}
+                    <li class="team-item">
+                        <div class="team-img">
+                            <img src="{{ url_for('static', filename='img/' ~ employee.image_url) }}" alt="">
+                        </div>
+                        <div class="team-content">
+                            <div class="team-name">{{ employee.name }}</div>
+                            <div class="team-position">{{ employee.position }}</div>
+                            <div class="team-contacts">
+                                <a class="team-contact">
+                                    <i class="bi bi-telephone"></i>
+                                    {{ employee.phone }}
+                                </a>
+                                <a class="team-contact">
+                                    <i class="bi bi-envelope"></i>
+                                    {{ employee.email }}
+                                </a>
+                            </div>
+                            <div class="team-schedule">
+                                <div class="team-schedule-title">Графік роботи:</div>
+                                <div class="team-schedule-item">{{ employee.schedule }}</div>
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+
+                <h2 class="contacts-subtitle" id="subdivisions">
+                    <span>Працівники підрозділів</span>
+                </h2>
+
+                <ul class="team-list">
+                    {% for subdivision in subdivision_employees %}
+                    <li class="team-item-subdivisions">
+                        <div class="team-img-subdivisions">
+                            <img src="{{ url_for('static', filename='img/' ~ subdivision.image_url) }}" alt="">
+                        </div>
+                        <div class="team-content">
+                            <div class="team-name">{{ subdivision.name }}</div>
+                            <div class="team-position">{{ subdivision.position }}</div>
+                            <div class="team-contacts">
+                                <a href="{{ subdivision.location }}" class="team-contact location">
+                                    <i class="bi bi-geo-alt"></i>
+                                    {{ subdivision.location_name }}
+                                </a>
+                                <a class="team-contact">
+                                    <i class="bi bi-telephone"></i>
+                                    {{ subdivision.phone }}
+                                </a>
+                            </div>
+                            <div class="team-schedule">
+                                <div class="team-schedule-title">Графік роботи:</div>
+                                <div class="team-schedule-item">{{ subdivision.schedule }}</div>
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </section>
+{% endblock %}

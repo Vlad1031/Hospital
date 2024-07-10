@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фотогалерея</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/gallery.css') }}">
+</head>
+<body>
+    {% extends 'base.html' %}
+    <!-- Інший контент домашньої сторінки -->
+
+    {% block content %}
+        <section class="photos" id="photos">
+            <div class="container">
+                <div class="photos-inner">
+                    <h1 class="title title-line photos-title">
+                        <span>Фотогалерея</span>
+                    </h1>
+                    <div class="photos-list">
+                        <div class="gallery gallery-items" id="gallery-items">
+                            {% for image in gallery_all_images %}
+                                <div class="gallery-item">
+                                    <img class="scale thumbnail" src="{{ url_for('static', filename='img/' ~ image.src) }}" alt="{{ image.alt }}" onclick="openModal('{{ url_for('static', filename='img/' ~ image.src) }}')">
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div id="modal" class="modal" onclick="closeModal(event)">
+                        <span class="close" onclick="closeModal(event)">&times;</span>
+                        <img class="modal-content" id="modalImage">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="{{ url_for('static', filename='js/gallery.js') }}"></script>
+    {% endblock %}
+</body>
+</html>

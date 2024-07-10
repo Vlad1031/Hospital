@@ -1,0 +1,104 @@
+.booking-form {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form .form-group {
+    margin-bottom: 15px;
+}
+
+.booking-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.booking-form input[type="text"],
+.booking-form input[type="number"],
+.booking-form input[type="date"],
+.booking-form input[type="tel"],
+.booking-form input[type="email"],
+.booking-form input[type="datetime-local"],
+.booking-form select,
+.booking-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.booking-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+.booking-form .form-check {
+    display: flex;
+    align-items: center;
+}
+
+.booking-form .form-check input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.booking-form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #009688;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.booking-form button[type="submit"] {
+    background-color: #009688;
+}
+
+.booking-form button[type="submit"]:hover {
+    background-color: #00beab;
+}
+
+.booking-form input[type="text"]:focus,
+.booking-form input[type="number"]:focus,
+.booking-form input[type="tel"]:focus,
+.booking-form input[type="email"]:focus,
+.booking-form input[type="datetime-local"]:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+    outline: none;
+    border-color: #009688;
+    box-shadow: 0 0 5px rgb(0, 166, 133);
+}
+
+.booking-form .form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.booking-form .form-row .form-group {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .booking-form {
+        padding: 15px;
+    }
+    .booking-form .form-row {
+        flex-direction: column;
+    }
+    .booking-form button[type="submit"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+

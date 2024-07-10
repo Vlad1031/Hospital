@@ -1,0 +1,66 @@
+{% block content %}
+    <link rel="stylesheet" href="static/css/about.css">
+
+    <section class="home" id="home">
+        <div class="home-container container grid">
+            <p class="home-title">Комунальне некомерційне підприємство</p>
+            <h4><span>Ольгопільський центр первинної медико-санітарної допомоги</span></h4>
+            <p class="home-title">Ольгопільської сільської ради</p>
+        </div>
+    </section>
+
+    <section class="info" id="info">
+        <div class="container">
+            <h1 class="title title-line">
+                <span>Про нас</span>
+            </h1>
+            <div class="info-inner">
+                <div class="info-text">
+                    <p>Комунальний заклад розпочав роботу з 01.04.2021 року із затвердженим штатним розписом.
+                        Після створення закладу було проведено у відповідності до нормативних документів
+                        структуру закладу та штатний розпис. На даний час функціонує 4 пункти здоров'я
+                        (с. Стратіївка, с. Любомирка, с. Берізки-Чечельницькі, с.Демівка) і А ЗПСМ с. Ольгопіль.
+                    </p>
+                    <p>За час свого існування матеріальний стан амбулаторії значно покращився, зокрема
+                         за допомогою спонсорів, за активної участі сільських голів, великої організаторської
+                         роботи голови адміністрації проведені капітальні ремонти приміщень.
+                    </p>
+                    <p>За короткий період існування закладу приділялась увага наданню невідкладної допомоги
+                        населенню, для чого А ЗПСМ с. Ольгопіль постійно забезпечувалися медикаментами для
+                        надання невідкладної допомоги. Також за активної допомоги фахівців ЛПЛ проводяться регулярні
+                    заняття з медичними працівниками закладів охорони здоров'я, що сприяло поліпшенню їх професійного рівня.</p>
+                </div>
+                <div class="info-img">
+                    <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="{{ url_for('static', filename='img/IMG_8722.JPG') }}" style="width:100%">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="{{ url_for('static', filename='img/IMG_8528.JPG') }}" style="width:100%">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="{{ url_for('static', filename='img/IMG_8537.JPG') }}" style="width:100%">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="static/js/about.js"></script>
+{% endblock %}

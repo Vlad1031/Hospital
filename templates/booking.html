@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн запис</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/booking.css') }}">
+</head>
+<body>
+    {% extends 'base.html' %}
+    <!-- Інший контент домашньої сторінки -->
+
+    {% block content %}
+        <section class="booking" id="booking">
+            <div class="container">
+                <div class="booking-inner">
+                    <h1 class="title title-line booking-title">
+                        <span>Онлайн запис</span>
+                    </h1>
+                    <form action="/send_email" method="POST" class="booking-form">
+                        <div class="form-group">
+                            <label for="specialty">Спеціальність лікаря:</label>
+                            <select id="specialty" name="specialty" required>
+                                <option value="Оберіть лікаря">Оберіть лікаря</option>
+                                <option value="Педіатр - Зінчук Світлана Іванівна">Педіатр - Зінчук Світлана Іванівна</option>
+                                <option value="Лікар загальної практики - Сімейний лікар - Пістуненко Вікторія Валеріївна">
+                                    Лікар загальної практики - Сімейний лікар - Пістуненко Вікторія Валеріївна</option>
+                                <option value="Лікар загальної практики - Сімейний лікар - Ковальчук Владислав Юрійовича">
+                                    Лікар загальної практики - Сімейний лікар - Ковальчук Владислав Юрійовича</option>
+                                <option value="Медсестра - Коваль Людмила Василівна - с. Демівка">
+                                    Медсестра - Коваль Людмила Василівна - с. Демівка</option>
+                                <option value="Медсестра - Тарасюк Зоя Степанівна - с. Берізки-Чечельницькі">
+                                    Медсестра - Тарасюк Зоя Степанівна - с. Берізки-Чечельницькі</option>
+                                <option value="Медбрат - Бенера Віктор Васильович - с. Любомирка">
+                                    Медбрат - Бенера Віктор Васильович - с. Любомирка</option>
+                                <option value="Медсестра - Гонявчук Наталя Миколаївна - с. Стратіївка">
+                                    Медсестра - Гонявчук Наталя Миколаївна - с. Стратіївка</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="fullName">ПІБ пацієнта:</label>
+                            <input type="text" id="fullName" name="fullName" placeholder="Ваш ПІБ" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Номер телефону:</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Ваш телефон" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Електронна пошта:</label>
+                                <input type="email" id="email" name="email" placeholder="Ваш email" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="appointmentDate">Дата та час прийому:</label>
+                                <input type="datetime-local" id="appointmentDate" name="appointmentDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="age">Вік:</label>
+                                <input type="number" id="age" name="age" placeholder="Ваш вік" min="0" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="gender">Стать:</label>
+                                <select id="gender" name="gender" required>
+                                    <option value="Оберіть стать пацієнта">Оберіть стать пацієнта</option>
+                                    <option value="Чоловік">Чоловік</option>
+                                    <option value="Жінка">Жінка</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            <label for="consent">Згоден на обробку персональних даних</label>
+                        </div>
+                        <div class="form-buttons">
+                            <button type="submit" class="btn btn-primary">Записатися</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <script src="{{ url_for('static', filename='js/booking.js') }}"></script>
+    {% endblock %}
+</body>
+</html>

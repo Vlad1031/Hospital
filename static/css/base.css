@@ -1,0 +1,90 @@
+body {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 21px;
+    color: #404040;
+}
+
+.container {
+    max-width: 1300px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/*button {*/
+/*    padding: 32px;*/
+/*    cursor: pointer;*/
+/*    display: none;*/
+/*}*/
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+i {
+    margin-right: 5px;
+}
+
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+h4 {
+    font-size: 32px;
+    color: #404040;
+    font-weight: 600;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 48px;
+}
+
+.title-line {
+    overflow: hidden;
+}
+
+.title-line span {
+    display: inline-block;
+    padding-right: 20px;
+}
+
+.title-line::after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    width: 100%;
+    height: 1px;
+    background: #ecebeb;
+    border: solid #ecebeb;
+    border-width: 0 1px;
+    margin-right: -100%;
+}
+
+body::-webkit-scrollbar,
+.containerLanguageCurrency::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track,
+.containerLanguageCurrency::-webkit-scrollbar-track {
+    background: #cecece;
+}
+
+body::-webkit-scrollbar-thumb,
+.containerLanguageCurrency::-webkit-scrollbar-thumb {
+    background-color: #009688;
+    border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+    body {
+        margin: 0;
+    }
+}

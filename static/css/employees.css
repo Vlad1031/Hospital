@@ -1,0 +1,112 @@
+.team-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+}
+
+.team-item {
+    margin: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .05);
+    background-color: #fff;
+    width: calc(33.333% - 30px);
+    border-radius: 15px;
+}
+
+.team-img {
+    border-radius: 15px;
+    height: 370px;
+    background-color: #dfdfdf;
+}
+
+.team-img img {
+    border-radius:15px;
+    height: 370px;
+    width: 100%;
+}
+
+.team-content {
+    padding: 20px;
+}
+
+.team-name {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.team-position {
+    margin-bottom: 20px;
+}
+
+.team-contact {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.location {
+    text-decoration: underline;
+}
+
+.team-schedule-title {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.team-schedule-item {
+    margin-bottom: 10px;
+}
+
+.team-item-subdivisions {
+    margin: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .05);
+    background-color: #fff;
+    width: calc(25% - 10px);
+    border-radius: 15px;
+}
+
+.team-img-subdivisions {
+    height: 300px;
+    border-radius: 15px;
+    background-color: #dfdfdf;
+}
+
+.contacts-subtitle {
+    position: relative;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 45px;
+    padding-left: 20px;
+}
+
+.contacts-subtitle::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    height: 32px;
+    width: 2px;
+    background-color: #009688;
+}
+
+@media (max-width: 768px) {
+    .team-item {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .team-item-subdivisions {
+        width: calc(100% - 24px);
+        margin: 10px 0;
+    }
+
+    .team-img, .team-img-subdivisions {
+        height: auto;
+    }
+
+    .contacts-subtitle {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+}
