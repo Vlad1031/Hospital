@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os
 from flask import Flask, render_template, redirect, url_for, request
 from flask_mail import Mail, Message
@@ -63,7 +64,7 @@ def send_email():
 
         # Відправляємо електронний лист
         msg = Message('Запис на прийом', sender=email, recipients=['aleft452254@gmail.com'])
-        msg.body = f'''Деталі запису:
+        msg.body = f"""Деталі запису:
             Спеціальність: {specialty}
             ПІБ пацієнта: {fullName}
             Номер телефону: {phone}
@@ -72,7 +73,8 @@ def send_email():
             Вік: {age}
             Стать: {gender}
             Згода на обробку персональних даних: {consent}
-            '''
+        """
+
         try:
             mail.send(msg)
             return redirect(url_for('success'))
