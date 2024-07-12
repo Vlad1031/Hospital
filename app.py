@@ -64,7 +64,8 @@ def send_email():
 
         # Відправляємо електронний лист
         msg = Message('Запис на прийом', sender=email, recipients=['aleft452254@gmail.com'])
-        msg.body = f"""Деталі запису:
+        msg.body = """
+            Деталі запису:
             Спеціальність: {specialty}
             ПІБ пацієнта: {fullName}
             Номер телефону: {phone}
@@ -73,7 +74,8 @@ def send_email():
             Вік: {age}
             Стать: {gender}
             Згода на обробку персональних даних: {consent}
-        """
+            """.format(specialty=specialty, fullName=fullName, phone=phone, email=email,
+                       appointmentDate=appointmentDate, age=age, gender=gender, consent=consent)
 
         try:
             mail.send(msg)
