@@ -120,3 +120,51 @@ img {
     from {opacity: .8}
     to {opacity: 1}
 }
+
+@media (max-width: 768px) {
+    .home-container {
+        height: auto;
+        padding: 20px;
+    }
+
+    .home-title {
+        font-size: 18px;
+    }
+
+    .home h4 {
+        font-size: 20px;
+    }
+
+    .home h4 span {
+        font-size: 20px;
+    }
+
+    .h4 span {
+        display: inline;
+    }
+
+    .h4 span::before {
+        content: "Ольгопільський центр";
+        display: block;
+    }
+
+    .h4 span::after {
+        content: "первинної медико-санітарної допомоги";
+        display: block;
+    }
+
+
+
+    .info-inner {
+        flex-direction: column;
+    }
+
+    .info-text {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .info-img {
+        margin-bottom: 20px;
+    }
+}

@@ -63,7 +63,7 @@ def send_email():
         consent = request.form.get('consent', False)
 
         # Відправляємо електронний лист
-        msg = Message('Запис на прийом', sender=email, recipients=['aleft452254@gmail.com'])
+        msg = Message('Запис на прийом', sender=email, recipients=['olgopilcpmsd@ukr.net'])
         msg.body = """
             Деталі запису:
             Спеціальність: {specialty}
